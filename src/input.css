@@ -9,3 +9,10 @@
   --color-light-text: #52605A;
   --color-green:#8ED800;
 }
+
+
+@layer utilities {
+  .smooth {
+    transition: transform 0.3s ease;
+  }
+}
