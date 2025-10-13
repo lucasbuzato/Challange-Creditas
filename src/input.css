@@ -8,11 +8,21 @@
   --color-text: #292929;
   --color-light-text: #52605A;
   --color-green:#8ED800;
+  --color-yellow:#B88A00;
+  --color-gray:#D6DCD9;
 }
 
 
 @layer utilities {
   .smooth {
     transition: transform 0.3s ease;
+  }
+}
+
+@layer components {
+  .botao-ativo {
+    background-color: #8ED800;
+    color: white;
+    transition: background-color 0.3s ease, color 0.3s ease;
   }
 }
