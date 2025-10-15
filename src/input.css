@@ -11,6 +11,8 @@
   --color-yellow:#B88A00;
   --color-gray:#D6DCD9;
   --color-text-gray:#9FADA7;
+  --color-dark-gray:#3B4540;
+  --color-dark-green:#317500;
 }
 
 
@@ -26,4 +28,28 @@
     color: white;
     transition: background-color 0.3s ease, color 0.3s ease;
   }
+  .toast-alerta {
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%) scale(0.9);
+  background-color: #2e2e2e;
+  color: #fff;
+  width: 338px;
+  height: 62px;
+  display: flex;
+    justify-content: center;
+  align-items: center;
+  border-radius: 12px;
+  font-size: 14px;
+  font-family: 'Poppins', sans-serif;
+  opacity: 0;
+  transition: all 0.3s ease;
+  z-index: 1000;
+}
+
+.toast-alerta.mostrar {
+  opacity: 1;
+  transform: translateX(-50%) scale(1);
+}
 }

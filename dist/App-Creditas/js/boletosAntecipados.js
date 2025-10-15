@@ -77,6 +77,6 @@ document.addEventListener("DOMContentLoaded", () => {
     localStorage.setItem("parcelasSelecionadas", JSON.stringify(selecionados));
     localStorage.setItem("todosBoletos", JSON.stringify(boletosPendentes));
 
-    window.location.href = "../Pages/avisoAntecipacao.html";
+    window.location.href = "../Pages/resumoAntecipacao.html";
   });
 });

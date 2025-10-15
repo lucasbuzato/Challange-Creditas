@@ -59,9 +59,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
       let conteudoDireita = "";
       if (pagos) {
-        conteudoDireita = `<button disabled class="bg-text-gray text-white w-[104px] h-[38px] rounded-lg text-sm font-semibold">Boleto Pago</button>`;
+        conteudoDireita = `<a disabled class="bg-text-gray flex justify-center items-center text-white w-[104px] h-[38px] rounded-lg text-sm font-semibold">Boleto Pago</a>`;
       } else if (i === 0) {
-        conteudoDireita = `<button class="bg-green text-white w-[104px] h-[38px] rounded-lg text-sm">Pagar Boleto</button>`;
+        conteudoDireita = `<a class="bg-green flex justify-center items-center text-white w-[104px] h-[38px] rounded-lg text-sm" href="../Pages/confirmarPagamento.html">Pagar Boleto</a>`;
       } else {
         conteudoDireita = "";
       }
