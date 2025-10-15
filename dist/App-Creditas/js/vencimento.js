@@ -1,7 +1,7 @@
-const botoes = document.querySelectorAll('#botoes button');
-const vencimentoAtual = document.getElementById('vencimento-atual');
-const vencimentoNovo = document.getElementById('vencimento-novo');
-const valorNovo = document.getElementById('valor-novo');
+const botoes = document.querySelectorAll("#botoes button");
+const vencimentoAtual = document.getElementById("vencimento-atual");
+const vencimentoNovo = document.getElementById("vencimento-novo");
+const valorNovo = document.getElementById("valor-novo");
 const botaoConfirmar = document.querySelector('button[type="submit"]');
 
 let botaoAtivo = null;
@@ -22,11 +22,10 @@ function atualizarBotaoConfirmar(ativo) {
   }
 }
 
-botoes.forEach(botao => {
+botoes.forEach((botao) => {
   const dia = parseInt(botao.textContent);
 
-  botao.addEventListener('click', () => {
-    // Clicou no mesmo botão → desmarca
+  botao.addEventListener("click", () => {
     if (botaoAtivo === botao) {
       botao.style.backgroundColor = "";
       botao.style.color = "";
@@ -37,13 +36,11 @@ botoes.forEach(botao => {
       return;
     }
 
-    // Resetar botão anterior
     if (botaoAtivo) {
       botaoAtivo.style.backgroundColor = "";
       botaoAtivo.style.color = "";
     }
 
-    // Ativar novo botão
     if (dia === diaAtual) {
       botao.style.backgroundColor = "var(--color-gray)";
       botao.style.color = "#666";
@@ -56,21 +53,17 @@ botoes.forEach(botao => {
       botao.style.color = "white";
       botaoAtivo = botao;
       vencimentoNovo.textContent = dia;
-      valorNovo.textContent = `R$${valores[dia].toFixed(2).replace('.', ',')}`;
+      valorNovo.textContent = `R$${valores[dia].toFixed(2).replace(".", ",")}`;
       atualizarBotaoConfirmar(true);
     }
   });
 });
 
-// Inicialmente desativado
 atualizarBotaoConfirmar(false);
 
-// Redirecionar quando clicar
-botaoConfirmar.addEventListener('click', (e) => {
+botaoConfirmar.addEventListener("click", (e) => {
   e.preventDefault();
   if (!botaoConfirmar.disabled) {
     window.location.href = "avisoVencimento.html";
   }
 });
-
-

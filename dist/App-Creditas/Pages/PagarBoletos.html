@@ -12,11 +12,12 @@
     <section class="bg-background font-poppins w-screen min-h-dvh ">
         <div class="px-5 pt-16">
             <div class="relative flex justify-center">
-                <a href="../index.html"><img class="absolute left-0" src="../imgs/Frame 4 (2).png" alt=""></a>
+                <a href="../Pages/anteciparBoletos.html"><img class="absolute left-0" src="../imgs/Frame 4 (2).png"
+                        alt=""></a>
                 <h2 class="text-lg">Pagar Parcelas</h2>
             </div>
-             <div class="flex flex-row justify-evenly text-center my-6">
-                <a href="" class="flex flex-col justify-center gap-2 items-center">
+            <div class="flex flex-row justify-evenly text-center my-6">
+                <a href="../Pages/anteciparBoletos.html" class="flex flex-col justify-center gap-2 items-center">
                     <img src="../imgs/Group 8 (2).png" alt="Icone Parcelas">
                     <h2 class="text-sm font-semibold">Pagar <br>
                         Antecipado</h2>
@@ -26,31 +27,44 @@
                     <h2 class="text-sm font-semibold">Mudar <br>
                         Vencimento</h2>
                 </a>
-                
+
 
             </div>
+
+            <div class="flex w-full h-[40px] justify-center items-center  bg-gray rounded-full mt-5">
+                <button id="tabPendentes"
+                    class="flex-1 h-[33px] ml-1 rounded-full bg-green text-white font-semibold text-xs">Próximos
+                    Boletos</button>
+                <button id="tabPagos"
+                    class="flex-1 h-[33px] ml-1 rounded-full text-text-gray font-semibold text-xs">Boletos já
+                    Pagos</button>
+            </div>
+
+            <div id="listaBoletos" class="mt-4 flex-1 pb-23 overflow-y-auto"></div>
+
         </div>
-            <footer class="fixed bottom-0 left-0 w-full flex justify-around items-center bg-white h-19 ">
-                <a href="../index.html" class="flex flex-col justify-center items-center">
-                    <img  class="w-[26px] h-[26px]" src="../imgs/location 1.png" alt="">
-                    <p>Home</p>
-                </a>
-                <a href="" class="flex flex-col justify-center items-center">
-                    <img class="w-[26px] h-[26px]" src="../imgs/car 1.png" alt="">
-                    <p>Auto</p>
-                </a>
-                <a class="flex flex-col justify-center items-center ">
-                    <img  class="w-[26px] h-[26px]" src="../imgs/Star 2.png" alt="">
-                    <p>Serviços</p>
-                </a>
-                <a href="" class="flex flex-col justify-center items-center ">
-                    <img  class="w-[26px] h-[26px]" src="../imgs/profile 1.png" alt="">
-                    <p>Perfil</p>
-                </a>
-            </footer>
+        </div>
+        <footer class="fixed bottom-0 left-0 w-full flex justify-around items-center bg-white h-19 ">
+            <a href="../index.html" class="flex flex-col justify-center items-center">
+                <img class="w-[26px] h-[26px]" src="../imgs/location 1.png" alt="">
+                <p>Home</p>
+            </a>
+            <a href="" class="flex flex-col justify-center items-center">
+                <img class="w-[26px] h-[26px]" src="../imgs/car 1.png" alt="">
+                <p>Auto</p>
+            </a>
+            <a class="flex flex-col justify-center items-center ">
+                <img class="w-[26px] h-[26px]" src="../imgs/Star 2.png" alt="">
+                <p>Serviços</p>
+            </a>
+            <a href="" class="flex flex-col justify-center items-center ">
+                <img class="w-[26px] h-[26px]" src="../imgs/profile 1.png" alt="">
+                <p>Perfil</p>
+            </a>
+        </footer>
     </section>
 
-    <script src="../js/app.js"></script>
+    <script src="../js/boletos.js"></script>
 </body>
 
 </html>

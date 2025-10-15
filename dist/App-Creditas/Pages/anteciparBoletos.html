@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/styles.css">
+    <title>Antecipar Parcelas</title>
+</head>
+
+<body>
+    <section class="bg-background font-poppins w-screen min-h-dvh">
+        <div class="px-5 pt-16">
+            <div class="relative flex justify-center">
+                <a href="../Pages/PagarBoletos.html">
+                    <img class="absolute left-0" src="../imgs/Frame 4 (2).png" alt="">
+                </a>
+                <h2 class="text-lg">Antecipar Parcelas</h2>
+            </div>
+
+            <div class="flex flex-row justify-evenly text-center my-6">
+
+                <a href="../Pages/mudarVencimento.html" class="flex flex-col justify-center gap-2 items-center">
+                    <img src="../imgs/Group 7.png" alt="Icone Negociação">
+                    <h2 class="text-sm font-semibold">Mudar <br> Vencimento</h2>
+                </a>
+            </div>
+
+            <div class="flex w-full h-[40px] justify-center items-center bg-gray rounded-full mt-5">
+                <button id="tabPendentes"
+                    class="flex-1 h-[33px] ml-1 rounded-full bg-green text-white font-semibold text-xs">
+                    Próximos Boletos
+                </button>
+            </div>
+
+            <div id="listaBoletos" class="mt-4 flex-1 pb-42 overflow-y-auto"></div>
+
+            <div id="btnConfirmarContainer" class="fixed bottom-22.5 left-0 w-full px-5 z-50">
+                <button id="btnConfirmar" disabled class="w-full h-[69px] bg-gray text-text font-semibold rounded-lg">
+                    Confirmar
+                </button>
+            </div>
+        </div>
+
+        <footer class="fixed bottom-0 left-0 w-full flex justify-around items-center bg-white h-19">
+            <a href="../index.html" class="flex flex-col justify-center items-center">
+                <img class="w-[26px] h-[26px]" src="../imgs/location 1.png" alt="">
+                <p>Home</p>
+            </a>
+            <a href="" class="flex flex-col justify-center items-center">
+                <img class="w-[26px] h-[26px]" src="../imgs/car 1.png" alt="">
+                <p>Auto</p>
+            </a>
+            <a class="flex flex-col justify-center items-center">
+                <img class="w-[26px] h-[26px]" src="../imgs/Star 2.png" alt="">
+                <p>Serviços</p>
+            </a>
+            <a href="" class="flex flex-col justify-center items-center">
+                <img class="w-[26px] h-[26px]" src="../imgs/profile 1.png" alt="">
+                <p>Perfil</p>
+            </a>
+        </footer>
+    </section>
+
+    <script src="../js/boletosAntecipados.js"></script>
+</body>
+
+</html>
