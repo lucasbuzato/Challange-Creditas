@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" href="../imgs/creditas.ico">
+    <link rel="stylesheet" href="../css/styles.css">
+    <title>Alterar Vencimento</title>
+</head>
+
+<body>
+    <section class="bg-background font-poppins w-screen min-h-dvh ">
+        <div class="px-5 pt-16">
+            <div class="relative flex justify-center">
+                <a href="../Pages/PagarBoletos.html"><img class="absolute left-0" src="../imgs/Frame 4 (2).png"
+                        alt=""></a>
+                <h2 class="text-lg font-normal">Alterar Vencimento</h2>
+            </div>
+
+
+            <form action="" class="">
+                <h2 class="text-xl py-9">Escolha um Novo dia Para o vencimento:</h2>
+                <div id="botoes" class="flex flex-row flex-wrap justify-center gap-5">
+                    <button type="button"
+                        class="bg-white w-[72px] h-[50px] rounded-2xl text-xl transition-colors duration-300">1</button>
+                    <button type="button"
+                        class="bg-white w-[72px] h-[50px] rounded-2xl text-xl transition-colors duration-300">5</button>
+                    <button type="button"
+                        class="bg-white w-[72px] h-[50px] rounded-2xl text-xl transition-colors duration-300">10</button>
+                    <button type="button"
+                        class="bg-white w-[72px] h-[50px] rounded-2xl text-xl transition-colors duration-300">15</button>
+                    <button type="button"
+                        class="bg-white w-[72px] h-[50px] rounded-2xl text-xl transition-colors duration-300">20</button>
+                    <button type="button"
+                        class="bg-white w-[72px] h-[50px] rounded-2xl text-xl transition-colors duration-300">25</button>
+                    <button type="button"
+                        class="bg-white w-[72px] h-[50px] rounded-2xl text-xl transition-colors duration-300">30</button>
+                </div>
+
+                <div class="my-9 border-l-4 border-yellow pl-1">
+                    <div class="flex gap-3">
+                        <img src="../imgs/calendar 1.png" alt="">
+                        <h4 class="text-[16px] font-semibold">Limite de Alteração</h4>
+                    </div>
+                    <p class="text-sm">Você pode alterar o vencimento no máximo duas vezes até o fim do seu contrato de
+                        {tipo de
+                        empréstimo} </p>
+                </div>
+
+
+                <div class="flex justify-end gap-12 border-b border-gray-300 pb-2 mb-4">
+                    <span class="text-lg text-text font-normal">Atual</span>
+                    <span class="text-lg text-black font-semibold">Novo</span>
+                </div>
+
+                <div class="flex justify-between items-center mb-2">
+                    <span class="text-text">Dia de vencimento</span>
+                    <div class="flex gap-25">
+                        <span class="text-text" id="vencimento-atual">15</span>
+                        <span class="text-black font-semibold" id="vencimento-novo">0</span>
+                    </div>
+                </div>
+
+
+                <div class="flex justify-between items-center mb-8">
+                    <span class="text-text">Valor da Parcela</span>
+                    <div class="flex gap-13">
+                        <span class="text-text" id="valor-atual">R$500,00</span>
+                        <span class="text-black font-semibold" id="valor-novo">R$0</span>
+                    </div>
+                </div>
+
+                <p class="text-light-text text-sm mb-8">
+                    O valor das próxima parcelas é atualizado porque a taxa de juros incide mais dias no contrato.
+                </p>
+
+                <button href="./" type="submit"
+                    class="w-full h-17 text-xl bg-gray text-text font-medium py-3 rounded-lg">
+                    Confirmar
+                </button>
+            </form>
+
+
+        </div>
+    </section>
+
+    <script src="../js/vencimento.js " defer></script>
+</body>
+
+</html>

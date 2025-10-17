@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+           <link rel="icon" href="../imgs/creditas.ico">
+    <link rel="stylesheet" href="../css/styles.css">
+    <title>Confirmar Pagamento</title>
+</head>
+
+<body>
+    <section class="bg-background font-poppins w-screen min-h-dvh">
+        <div class="px-5 pt-16 flex flex-col h-screen justify-between">
+            <div>
+                <div class="relative flex justify-center mb-14">
+                    <a href="../Pages/PagarBoletos.html"><img class="absolute left-0" src="../imgs/Frame 4 (2).png"
+                            alt=""></a>
+                    <h2 class="text-lg font-normal text-center">Escolha um método <br>
+                        de Pagamento</h2>
+                </div>
+
+                <div class="flex flex-col gap-5">
+
+                    <button
+                        class="metodo bg-gray rounded-lg p-4 w-full h-[70px] flex items-center justify-between border-4 border-transparent transition-all">
+                        <div class="flex items-center space-x-3">
+                            <img src="../imgs/pix-brands-solid 1.png" alt="">
+                            <div class="text-left">
+                                <p class="font-semibold text-text">Pix</p>
+                                <p class="text-sm text-dark-gray">***.***.***-01</p>
+                            </div>
+                        </div>
+                    </button>
+
+
+                    <button
+                        class="metodo bg-gray rounded-lg p-4 w-full h-[70px] flex items-center justify-between border-4 border-transparent transition-all">
+                        <div class="flex items-center space-x-3">
+                            <img src="../imgs/icons8-boleto-64 1.png" alt="">
+                            <div class="text-left">
+                                <p class="font-semibold text-text">Boleto Bancário</p>
+                            </div>
+                        </div>
+                    </button>
+
+                    <button
+                        class="metodo bg-gray rounded-lg p-4 w-full h-[70px] flex items-center justify-between border-4 border-transparent transition-all">
+                        <div class="flex items-center space-x-2">
+                            <img src="../imgs/Group 299.png " alt="">
+                            <div class="text-left">
+                                <p class="font-semibold text-gray-800">MasterCard</p>
+                                <p class="text-sm text-dark-gray">****.****.****.0154</p>
+                            </div>
+                        </div>
+                    </button>
+
+                </div>
+            </div>
+            <button id="confirmarBtn" class="w-full mb-10 h-17 text-xl bg-gray text-text font-medium py-3 rounded-lg">
+                Confirmar
+            </button>
+        </div>
+    </section>
+
+    <script src="../js/confirmarPagamento.js"></script>
+</body>
+
+</html>
