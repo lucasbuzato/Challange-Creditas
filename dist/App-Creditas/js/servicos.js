@@ -74,7 +74,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   let activeCategory = null;
 
-  // --- Renderização dos serviços ---
+
   function renderServices(filteredServices) {
     serviceList.innerHTML = "";
 
@@ -104,7 +104,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
   renderServices(services);
 
-  // --- Filtro por pesquisa ---
   searchInput.addEventListener("input", () => {
     const query = searchInput.value.toLowerCase();
     const filtered = services.filter(service =>
@@ -114,27 +113,30 @@ document.addEventListener("DOMContentLoaded", () => {
     renderServices(filtered);
   });
 
-  // --- Filtro por categoria (com toggle) ---
-  categoryButtons.forEach(button => {
-    button.addEventListener("click", () => {
-      const category = button.dataset.category;
+ categoryButtons.forEach((button) => {
+  button.addEventListener("click", () => {
+    const category = button.dataset.category;
 
-      if (activeCategory === category) {
-        // desmarca
-        activeCategory = null;
-        button.classList.remove("bg-[#8ED800]", "text-white");
-        renderServices(services);
-      } else {
-        // marca o botão atual e desmarca os outros
-        activeCategory = category;
-        categoryButtons.forEach(btn => btn.classList.remove("bg-[#8ED800]", "text-white"));
-        button.classList.add("bg-[#8ED800]", "text-white");
+    if (activeCategory === category) {
+      activeCategory = null;
+      button.classList.remove("bg-[#8ED800]", "text-white");
+      button.classList.add("bg-white", "text-black"); // volta pro padrão
+      renderServices(services);
+    } else {
+      activeCategory = category;
+      categoryButtons.forEach((btn) => {
+        btn.classList.remove("bg-[#8ED800]", "text-white");
+        btn.classList.add("bg-white", "text-black"); // volta padrão
+      });
+      button.classList.add("bg-[#8ED800]", "text-white");
+      button.classList.remove("bg-white", "text-black");
 
-        const filtered = services.filter(service =>
-          service.categoria.some(cat => cat === category)
-        );
-        renderServices(filtered);
-      }
-    });
+      const filtered = services.filter((service) =>
+        service.categoria.some((cat) => cat === category)
+      );
+      renderServices(filtered);
+    }
   });
+});
+
 });

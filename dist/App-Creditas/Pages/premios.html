@@ -6,13 +6,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="../css/styles.css">
   <title>Prêmios</title>
-  <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
 <body>
   <section class="bg-background w-screen min-h-dvh font-poppins">
     <div class="px-5 pt-16 pb-28">
-      <!-- Header -->
+
       <div class="flex items-center justify-center relative">
         <a href="../index.html" class="absolute left-0">
           <img src="../imgs/Frame 4 (2).png" alt="Voltar" class="w-6 h-6">
@@ -20,17 +19,13 @@
         <h2 class="text-lg">Prêmios</h2>
       </div>
 
-      <!-- Campo de pesquisa -->
       <input id="searchInput" type="text" placeholder="Pesquisar"
         class="w-full my-4 h-[60px] p-3 focus:ring-green focus:ring-2  rounded-xl text-[16px] placeholder-light-text bg-white">
 
-      <!-- Título -->
       <h3 class="text-lg my-4 !font-semibold text-text">Veja opções de Prêmios</h3>
 
-      <!-- Categorias (scroll horizontal) -->
-      <div class="overflow-x-auto scrollbar-hide">
-        <div id="categoryContainer"
-          class="flex space-x-3 pb-2 whitespace-nowrap">
+      <div class="overflow-x-auto [scrollbar-width:none] [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none]">
+        <div id="categoryContainer" class="flex space-x-3 pb-2 whitespace-nowrap">
           <button class="category-btn bg-white text-xs px-4 py-2 rounded-full !font-semibold flex-shrink-0"
             data-category="Carro">Carro</button>
           <button class="category-btn bg-white text-xs px-4 py-2 rounded-full !font-semibold flex-shrink-0"
@@ -42,22 +37,11 @@
         </div>
       </div>
 
-      <!-- Lista de prêmios -->
       <section id="premiosList" class="space-y-15 mt-6">
-        <!-- JS vai gerar blocos como:
-        <div>
-          <h4 class="font-semibold text-[16px] flex items-center gap-2">
-            <img src="../imgs/coin.png" class="w-5 h-5"> 1.000 pts
-          </h4>
-          <div class="flex overflow-x-auto space-x-4 mt-3 pb-2">
-            ...cards...
-          </div>
-        </div>
-        -->
+
       </section>
     </div>
 
-    <!-- Footer fixo -->
     <footer class="fixed bottom-0 left-0 w-full flex justify-around items-center bg-white h-19">
       <a href="../index.html" class="flex flex-col justify-center items-center opacity-30">
         <img class="w-[26px] h-[26px]" src="../imgs/location 1.png" alt="">
@@ -82,5 +66,3 @@
 </body>
 
 </html>
-
-

@@ -9,9 +9,12 @@
   --color-light-text: #52605A;
   --color-green:#8ED800;
   --color-yellow:#B88A00;
+  --color-light-yellow:#FADE41;
   --color-gray:#D6DCD9;
+  --color-light-green:#E1FFA8;
   --color-text-gray:#9FADA7;
   --color-dark-gray:#3B4540;
+  --color-green-gradient:#6ED507;
   --color-dark-green:#317500;
 }
 
@@ -23,6 +26,20 @@
 }
 
 @layer components {
+     .scrollbar-hidden::-webkit-scrollbar {
+        display: none;
+      }
+
+      /* IE and Edge */
+      .scrollbar-hidden {
+        -ms-overflow-style: none;
+      }
+
+      /* Firefox */
+      .scrollbar-hidden {
+        scrollbar-width: none;
+      }
+    }
   .botao-ativo {
     background-color: #8ED800;
     color: white;
@@ -51,5 +68,4 @@
 .toast-alerta.mostrar {
   opacity: 1;
   transform: translateX(-50%) scale(1);
-}
 }

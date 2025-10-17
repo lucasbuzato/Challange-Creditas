@@ -1,8 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {
-  // Caminho da home (ajuste se necessário)
   const homeURL = "../index.html";
 
-  // ===== PIX =====
   const btnPix = document.getElementById("btnCopiarPix");
   if (btnPix) {
     const codigoPix = "421543215321532143211234567423425321634321";
@@ -18,7 +16,6 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  // ===== BOLETO =====
   const btnBoleto = document.getElementById("btnCopiarBoleto");
   if (btnBoleto) {
     const codigoBoleto = "34191234123412341234123412341234123412341234";
@@ -34,7 +31,6 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  // ===== MASTERCARD =====
   const btnMaster = document.getElementById("btnConfirmarMastercard");
   if (btnMaster) {
     btnMaster.addEventListener("click", () => {
@@ -52,8 +48,6 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 });
 
-
-// ===== FUNÇÕES GERAIS =====
 function mostrarAlerta(mensagem) {
   const alerta = document.createElement("div");
   alerta.className = "toast-alerta";
@@ -72,4 +66,3 @@ function removerAlerta() {
   const alerta = document.querySelector(".toast-alerta");
   if (alerta) alerta.remove();
 }
-
