@@ -77,6 +77,62 @@ document.addEventListener("DOMContentLoaded", () => {
       descricao: "5% CashBack",
       pontos: "15000",
     },
+    {
+      nome: "Desconto na Parcela do Consignado",
+      categoria: ["Pontos", "Empréstimo"],
+      imagem: "../imgs/Rectangle 71.png",
+      descricao: "5% de desconto na próxima parcela",
+      pontos: "1000",
+    },
+    {
+      nome: "CashBack Parcela Seguro Auto",
+      categoria: ["Seguro", "Carro"],
+      imagem: "../imgs/Rectangle 71-1.png",
+      descricao: "3% de volta na próxima parcela",
+      pontos: "4000",
+    },
+    {
+      nome: "Parcela Grátis no Seguro de Vida",
+      categoria: ["Seguro"],
+      imagem: "../imgs/Rectangle 71.png",
+      descricao: "Ganhe 1 parcela grátis",
+      pontos: "15000",
+    },
+    {
+      nome: "Parcela com 50% de Desconto",
+      categoria: ["Financiamento", "Carro"],
+      imagem: "../imgs/Rectangle 71-1.png",
+      descricao: "Metade do valor da parcela",
+      pontos: "15000",
+    },
+    {
+      nome: "Redução de Juros",
+      categoria: ["Financiamento", "Imóveis"],
+      imagem: "../imgs/Rectangle 71-2.png",
+      descricao: "Economize até 7% em juros futuros",
+      pontos: "15000",
+    },
+    {
+      nome: "CashBack na Parcela em Atraso",
+      categoria: ["Pontos", "Atrasados"],
+      imagem: "../imgs/Rectangle 71-1.png",
+      descricao: "2% de volta pagando em dia",
+      pontos: "1000",
+    },
+    {
+      nome: "Pular 1 Parcela",
+      categoria: ["Empréstimo"],
+      imagem: "../imgs/Rectangle 71-2.png",
+      descricao: "Adie uma parcela sem juros",
+      pontos: "15000",
+    },
+    {
+      nome: "Cupom Multi-Parcela",
+      categoria: ["Pontos"],
+      imagem: "../imgs/Rectangle 71.png",
+      descricao: "Desconto de 10% espalhado em 3 parcelas",
+      pontos: "15000",
+    },
   ];
 
   const premiosList = document.getElementById("premiosList");
@@ -149,14 +205,19 @@ document.addEventListener("DOMContentLoaded", () => {
 
       items.forEach((item) => {
         const card = document.createElement("div");
-        card.className = "bg-white rounded-xl overflow-hidden";
+        card.className = " h-auto rounded-xl";
         card.innerHTML = `
-          <img src="${item.imagem}" alt="${item.nome}" class="w-full aspect-[6/3] object-contain bg-white">
-          <div class="bg-[#8ED800] p-4 text-left rounded-b-xl">
-            <h4 class="text-sm font-semibold pb-1 text-white leading-tight overflow-hidden text-ellipsis whitespace-nowrap">${item.nome}</h4>
-            <p class="text-xs font-semibold  text-text overflow-hidden text-ellipsis whitespace-nowrap">${item.descricao}</p>
-          </div>
-        `;
+  <img src="${item.imagem}" alt="${item.nome}" class="w-full aspect-[6/3] object-contai">
+  <div class="bg-[#8ED800] p-4 text-left rounded-b-xl">
+    <h4 class="text-sm font-semibold pb-1 text-white leading-tight whitespace-normal overflow-visible">
+      ${item.nome}
+    </h4>
+    <p class="text-xs font-semibold text-text whitespace-normal overflow-visible">
+      ${item.descricao}
+    </p>
+  </div>
+`;
+
         grid.appendChild(card);
       });
 
@@ -172,31 +233,30 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   categoryButtons.forEach((button) => {
-  button.addEventListener("click", () => {
-    const category = button.dataset.category;
+    button.addEventListener("click", () => {
+      const category = button.dataset.category;
 
-    if (activeCategory === category) {
-      activeCategory = null;
-      button.classList.remove("bg-[#8ED800]", "text-white");
-      button.classList.add("bg-white", "text-black"); // volta pro padrão
-      renderServices(services);
-    } else {
-      activeCategory = category;
-      categoryButtons.forEach((btn) => {
-        btn.classList.remove("bg-[#8ED800]", "text-white");
-        btn.classList.add("bg-white", "text-black"); // volta padrão
-      });
-      button.classList.add("bg-[#8ED800]", "text-white");
-      button.classList.remove("bg-white", "text-black");
+      if (activeCategory === category) {
+        activeCategory = null;
+        button.classList.remove("bg-[#8ED800]", "text-white");
+        button.classList.add("bg-white", "text-black"); // volta pro padrão
+        renderServices(services);
+      } else {
+        activeCategory = category;
+        categoryButtons.forEach((btn) => {
+          btn.classList.remove("bg-[#8ED800]", "text-white");
+          btn.classList.add("bg-white", "text-black"); // volta padrão
+        });
+        button.classList.add("bg-[#8ED800]", "text-white");
+        button.classList.remove("bg-white", "text-black");
 
-      const filtered = services.filter((service) =>
-        service.categoria.some((cat) => cat === category)
-      );
-      renderServices(filtered);
-    }
+        const filtered = services.filter((service) =>
+          service.categoria.some((cat) => cat === category)
+        );
+        renderServices(filtered);
+      }
+    });
   });
-});
-
 
   window.addEventListener("load", () => {
     setTimeout(renderServices, 100);

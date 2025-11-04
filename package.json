@@ -4,8 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "npx @tailwindcss/cli -i ./src/input.css -o ./dist/App-Creditas/css/styles.css --watch",
-    "deploy": "gh-pages -d dist/App-Creditas"
+    "dev": "npx @tailwindcss/cli -i ./src/input.css -o ./dist/css/styles.css --watch",
+    "deploy": "gh-pages -d dist"
   },
   "repository": {
     "type": "git",

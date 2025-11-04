@@ -1,5 +1,7 @@
 document.addEventListener("DOMContentLoaded", () => {
   const homeURL = "../index.html";
+  const PixURL = "../Pages/confirmacaoPagamentoPix.html";
+  const CartaoURL = "../Pages/confirmacaoPagamentoCartao.html";
 
   const btnPix = document.getElementById("btnCopiarPix");
   if (btnPix) {
@@ -10,7 +12,7 @@ document.addEventListener("DOMContentLoaded", () => {
         mostrarAlerta("Código Copiado Pix com sucesso");
 
         setTimeout(() => {
-          window.location.href = homeURL;
+          window.location.href = PixURL;
         }, 3000);
       });
     });
@@ -41,7 +43,7 @@ document.addEventListener("DOMContentLoaded", () => {
         mostrarAlerta("Pagamento aprovado com sucesso!");
 
         setTimeout(() => {
-          window.location.href = homeURL;
+          window.location.href = CartaoURL;
         }, 2000);
       }, 2000);
     });
